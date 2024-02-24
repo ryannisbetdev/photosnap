@@ -1,0 +1,30 @@
+.stories__hero {
+    .hero__content::before {
+        display: none;
+    }
+}
+
+
+/* Tablet styles */
+@media only screen and (min-width: 768px) {
+
+    .stories__hero {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+
+        .hero__content {
+            position: absolute;
+            background: transparent;
+            width: 50%;
+        }
+
+        .hero__img {
+            flex-grow: 1;
+        }
+
+    }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1180px) {}

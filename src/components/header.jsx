@@ -22,9 +22,9 @@ function Header() {
             <div className={`navigation__container ${isMenuOpen ? '' : 'close'}`}>
 
                 <ul className="navigation">
-                    <li className="navigation__item"> <a href="/" className="navigation__link">Stories</a></li>
-                    <li className="navigation__item"> <a href="/" className="navigation__link">Features</a></li>
-                    <li className="navigation__item"> <a href="/" className="navigation__link">Pricing</a></li>
+                    <li className="navigation__item"> <a href="/stories" className="navigation__link">Stories</a></li>
+                    <li className="navigation__item"> <a href="/features" className="navigation__link">Features</a></li>
+                    <li className="navigation__item"> <a href="/pricing" className="navigation__link">Pricing</a></li>
                 </ul>
                 
                 <a href="/" className="navigation__btn btn btn--dark">Get an invite</a>

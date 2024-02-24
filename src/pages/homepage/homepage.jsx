@@ -26,7 +26,7 @@ import FeatureImg3 from '../../assets/features/embed.svg';
 
 import GalleryItem from '../../components/gallery-item';
 
-const galleryItems =[
+const galleryItems = [
 
     {
         img: GalleryImg1,
