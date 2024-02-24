@@ -78,7 +78,7 @@ function Homepage() {
                     <div className="section__content">
                         <h2 className="heading">Beautiful stories every time</h2>
                         <p className="section__text">We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.</p>
-                        <a href="/" className="u-link u-link--dark">View the stories <img src={darkArrow} className="link__arrow"/></a>
+                        <a href="/stories" className="u-link u-link--dark">View the stories <img src={darkArrow} className="link__arrow"/></a>
                     </div>
                 </div>
 
@@ -92,7 +92,7 @@ function Homepage() {
                     <div className="section__content">
                         <h2 className="heading">Designed for everyone</h2>
                         <p className="section__text">Photosnap can help you create stories that resonate with your audience. Our tool is designed for photographers of all levels, brands, businesses you name it.</p>
-                        <a href="/" className="u-link u-link--dark">View the stories <img src={darkArrow} className="link__arrow"/></a>
+                        <a href="/stories" className="u-link u-link--dark">View the stories <img src={darkArrow} className="link__arrow"/></a>
                     </div>
                 </div>
             </section>

@@ -12,7 +12,7 @@ function Header() {
 
     return (
         <header className="header__container">
-            <img className="header__logo" src={Logo} alt="Photosnap" />
+            <a href="/" className="header__logo"><img src={Logo} alt="Photosnap" /></a>
 
             <button className={`header__hamburger ${isMenuOpen ? 'close' : ''}`} onClick={toggleMenu}>
                 <span className="hamburger__line"></span>
