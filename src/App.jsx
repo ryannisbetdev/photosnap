@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import Homepage from './pages/homepage/homepage';
 import Stories from './pages/stories/stories';
 import Features from './pages/features/features';
+import Pricing from './pages/pricing/pricing';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
               <Route path="/" element={<Homepage />}></Route>
               <Route path="/stories" element={<Stories />}></Route>
               <Route path="/features" element={<Features />}></Route>
+              <Route path="/pricing" element={<Pricing />}></Route>
             </Routes>
           </div>
         <Footer />

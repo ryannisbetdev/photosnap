@@ -1,0 +1,306 @@
+@import '../../default-variables.scss';
+
+.pricing {
+    &__toggleWrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__option {
+        width: 100px;
+        text-align: center;
+
+        &.active {
+            font-weight: 700;
+        }
+    }
+
+    &__toggle {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 28px;
+    }
+
+    &__checkbox {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .pricing__slider {
+            background-color: $black;
+        }
+
+        &:checked + .pricing__slider::before {
+            -webkit-transform: translateX(24px);
+            -ms-transform: translateX(24px);
+            transform: translateX(24px);
+            background-color: $white;
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $grey;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 20px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 2px;
+            bottom: 3px;
+            background-color: $black;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 20px;
+        }
+    }
+
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    &__card {
+        background-color: $grey;
+        margin-inline: 1rem;
+        padding: 2rem;
+        text-align: center;
+
+        &.dark {
+            background-color: $black;
+            color: $white;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset-block-start: 0;
+                inset-inline-start: 0;
+                width: 100%;
+                height: 5px;
+                background: $gradient;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            
+            &:hover {
+                background: darken($grey, 10%);
+            }
+        }
+    }
+
+    &__price {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-block-end: 1rem;
+        margin: 0;
+    }
+
+    &__table {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    &__heading {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-block-end: 1rem;
+        padding: 1rem;
+        border-bottom: 2px solid $black;
+    
+    }
+
+    &__section {
+        padding: 1rem;
+    }
+}
+
+.table {
+    &__row {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $grey;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__headingWrap {
+        display: none;
+    }
+
+    &__section {
+        display: flex;
+        padding-block: 2rem 1rem;
+        position: relative;
+    }
+
+    &__label {
+        position: relative;
+        flex-grow: 1;
+        text-align: left;
+
+        &::before {
+            content: "Basic";
+            position: absolute;
+            top: -25px;
+            left: 0;
+            width: 100%;
+            text-transform: uppercase;
+            font-size: .85rem;
+            color: darken($grey, 40%);
+            letter-spacing: 2px;
+        }
+
+        &.pro::before {
+            content: "Pro";
+        }
+
+        &.business::before {
+            content: "Business";
+        }
+    }
+
+    &__heading {
+        font-weight: 700;
+        padding-block: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+
+
+/* Tablet styles */
+@media only screen and (min-width: 768px) {
+
+    .pricing {
+        &__card {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 2fr 1fr;
+            text-align: start;
+            align-items: center;
+            gap: 2rem;
+            padding: 1rem 2rem;
+        }
+
+        &__priceWrap {
+            text-align: end;
+        }
+
+        &__text {
+            font-size: 1.15rem;
+        }
+
+        &__toggleWrap {
+            margin-block: 4rem 2rem;
+        }
+    }
+    
+    .table {
+        &__row {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid $grey;
+            gap: 2rem;
+            justify-content: space-between;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        &__headingWrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-block: 0;
+            position: relative;
+            width: 300px;
+
+            &--heading {
+                width: 300px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &__label {
+            position: relative;
+            width: 100%;
+            text-align: left;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &__heading {
+            flex-grow: 1;
+            text-align: left;
+        }
+    }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1180px) {
+
+    .pricing {
+        &__cards {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% - 20rem);
+            margin: auto;
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-block: 5rem;
+            
+            &:not(.dark) {
+                padding-block: 3rem;
+            }
+        }
+
+        &__priceWrap {
+            text-align: center;
+        }
+
+        &__option {
+            font-size: 1.5rem;
+            width: 200px;
+        }
+
+        &__compare {
+            width: 70%;
+            margin: auto;
+        }
+    }
+}

@@ -10,6 +10,8 @@ import FeatureImg4 from '../../assets/features/custom-domain.svg';
 import FeatureImg5 from '../../assets/features/boost-exposure.svg';
 import FeatureImg6 from '../../assets/features/drag-drop.svg';
 
+import arrow from '../../assets/shared/arrow-white.svg';
+
 
 function Features() {
     return (
@@ -66,6 +68,11 @@ function Features() {
                 </div>
 
             </section>
+
+            <div className="beta__section">
+                <h1 className="heading">We're in Beta. Get your invite today!</h1>
+                <a href="/" className="u-link">Get an invite<img src={arrow} alt="" className="link__arrow" /></a>
+            </div>
 
         </>
     )

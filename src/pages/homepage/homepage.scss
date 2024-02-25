@@ -21,12 +21,6 @@
     }
 }
 
-.feature {
-    &__item {
-        text-align: center;
-        padding: 2rem;
-    }
-}
 
 /* Tablet styles */
 @media only screen and (min-width: 768px) {
@@ -51,32 +45,4 @@
             justify-content: center
         }
     }
-
-    .feature {
-        &__item {
-            width: 80%;
-            margin: auto;
-        }
-    }
 }
-
-/* Desktop styles */
-@media only screen and (min-width: 1180px) {
-    .feature {
-        &__container {
-            display: flex;
-            justify-content: space-evenly;
-            padding: 2rem;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        &__item {
-            width: 25%;
-        }
-    }
-}
-
-
-/* Large desktop styles */
-@media only screen and (min-width: 1770px) {}
